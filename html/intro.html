@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="shortcut icon" href="../icons/web.png" type="image/x-icon">
+    <title>DSA++</title>
+</head>
+
+<body>
+
+    <section id="introDS">
+        <div class="introDS__left">
+            <ul id="introDS__ul">
+                <li class="nav__item toggled "><a href="#">Introduction</a></li>
+                <li class="nav__item"><a href="#">Arrays</a></li>
+                <li class="nav__item"><a href="#">Linked Lists</a></li>
+                <li class="nav__item "><a href="#">Stacks</a></li>
+                <li class="nav__item"><a href="#">Queues</a></li>
+                <li class="nav__item"><a href="#">Trees</a></li>
+                <li class="nav__item"><a href="#">Graphs</a></li>
+            </ul>
+        </div>
+        <div class="introDS__right">
+            <div id="0" class="content active">
+                <div class="card">
+                    <h1>what are Data structures?</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        Data structures are specialized formats for organizing and storing data to perform operations
+                        efficiently. They provide a way to organize and structure data in a computer's memory or
+                        storage, allowing for efficient retrieval, insertion, and deletion of data. Different data
+                        structures are designed to suit various types of applications and operations.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Types: </h1>
+                    <div class="line">
+
+                    </div>
+                    <ul>
+                        <li>
+                            <p>
+                                <span><a href="">Arrays </a></span>: A collection of elements, each identified by an
+                                index
+                                or a key.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span><a href="">Linked Lists </a></span>: A sequence of elements where each element
+                                points
+                                to the next one in the sequence.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span><a href="">Stacks </a></span>: A collection of elements with last-in, first-out
+                                (LIFO)
+                                access. Elements can only be added or removed from the top.
+                            </p>
+                        </li>
+                        <li>
+                            <p><span><a href="">Queues </a></span>: A collection of elements with first-in, first-out
+                                (FIFO)
+                                access. Elements are added at the rear and removed from the front.</p>
+                        </li>
+
+                        <li>
+                            <p><span><a href="">Trees </a></span>: A hierarchical data structure where each element
+                                (node)
+                                has a parent and zero or more children.</p>
+                        </li>
+
+                        <li>
+                            <p><span><a href="">Graphs </a></span>: A collection of nodes connected by edges. Graphs can
+                                be
+                                directed or undirected, and edges may have weights.</p>
+                        </li>
+
+                        <li>
+                            <p><span><a href="">Hash Tables </a></span>: An array-based data structure that uses a hash
+                                function to map keys to indices. It allows for efficient key-based data retrieval.</p>
+                        </li>
+                        <li>
+                            <p><span><a href="">Heaps </a></span>: A specialized tree-based data structure that
+                                satisfies
+                                the heap property. It is often used in priority queues.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="1" class="content">
+                <div class="card">
+                    <h1>Arrays</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        Arrays are fundamental data structures that store elements of the same type in contiguous memory
+                        locations. Each element in an array is identified by an index, starting from 0. This index
+                        allows direct access to elements, making array retrieval and manipulation efficient. Arrays
+                        offer constant-time access to any element but have fixed sizes, requiring contiguous memory
+                        allocation. Dynamic arrays, like those in many programming languages, can resize during runtime.
+                        Arrays are widely used for their simplicity and efficiency in storing and accessing data in
+                        various algorithms and applications, playing a crucial role in computer programming and data
+                        manipulation tasks.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Efficient Access</span>: Arrays provide constant-time access to
+                                elements using their index, making retrieval quick and straightforward.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Locality</span>: Since elements are stored in contiguous
+                                memory locations, arrays benefit from good memory locality, which can enhance
+                                performance due to cache efficiency.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Simple Implementation</span>: Arrays are simple and easy to
+                                implement, making them a go-to choice for basic data storage needs.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Predictable Performance</span>: Array operations have predictable
+                                time complexity, which simplifies algorithm analysis and optimization.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Fixed Size</span>: Arrays have a fixed size, making it challenging to
+                                dynamically resize them. This can lead to inefficient memory usage if the size needs to
+                                change during runtime.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Insertion and Deletion</span>: Inserting or deleting elements in the
+                                middle of an array requires shifting elements, resulting in inefficient time complexity,
+                                especially for large arrays.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Contiguous Memory</span>: Arrays need contiguous memory, which may be
+                                challenging to allocate in some situations, limiting their applicability in certain
+                                scenarios.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Wasted Space</span>: If the array size is larger than needed, it can
+                                lead to wasted memory, as the entire allocated space is reserved even if not fully
+                                utilized.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="wrapper">
+                        <div style="--id:0" class="i">
+                            <p id="el">1</p>
+                        </div>
+                        <div style="--id:1" class="i">
+                            <p id="el">2</p>
+                        </div>
+                        <div style="--id:2" class="i">
+                            <p id="el">3</p>
+                        </div>
+                        <div style="--id:3" class="i">
+                            <p id="el">4</p>
+                        </div>
+                        <div style="--id:4" class="i">
+                            <p id="el">5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #040404; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include&lt;iostream&gt;</span>
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">std;</span>
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// length of an array</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">a[]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">};</span> <span style="color: #75715e">// intialising an array</span>
+
+    <span style="color: #75715e">//displaying elements using i </span>
+    <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span> <span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">n</span> <span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">){</span> 
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">a[i]</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; &quot;</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span> <span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">//displaying elements using auto keyword </span>
+    <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">auto</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">:</span><span style="color: #f8f8f2">a){</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre>
+                    </div>
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+
+                </div>
+            </div>
+            <div id="2" class="content">
+                <div class="card">
+                    <h1>Single Linked Lists</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        A singly linked list is a linear data structure where elements, called nodes, are connected
+                        sequentially. Each node contains data and a reference to the next node. The list starts with a
+                        head node and ends with a null reference. Insertions and deletions are efficient at the
+                        beginning, but traversing the list requires linear time. Singly linked lists are
+                        memory-efficient, as nodes can be dynamically allocated. However, random access is impractical.
+                        Common operations include insertion, deletion, and traversal. They are fundamental in computer
+                        science and widely used in various applications, such as implementing stacks, queues, and
+                        symbolic expressions in compilers.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Dynamic Size</span>: Singly linked lists can easily grow or shrink in
+                                size during runtime, as memory is allocated dynamically.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Efficient Insertions/Deletions at the Beginning</span>: Insertions
+                                and deletions at the beginning of the list are fast and constant time, as they only
+                                require updating the references of adjacent nodes.
+                                performance due to cache efficiency.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Efficiency</span>: Memory is allocated as needed for each
+                                element, reducing memory wastage compared to fixed-size arrays.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Ease of Implementation</span>: Singly linked lists are
+                                straightforward to implement and understand, making them a good choice for educational
+                                purposes.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">No Pre-allocation of Memory</span>: The memory is allocated
+                                on-the-fly, and there's no need to pre-allocate a fixed size, making it more adaptable
+                                to varying data sizes.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">No Random Access</span>: Accessing elements at arbitrary positions
+                                requires traversing the list from the beginning, leading to linear time complexity for
+                                such operations.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Overhead</span>: Each node in a singly linked list requires
+                                additional memory for storing the data and the reference to the next node, leading to
+                                increased memory overhead.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Traversal Overhead</span>: Traversing the list requires sequential
+                                access, which can be inefficient for certain operations compared to structures with
+                                direct access like arrays.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Backtracking is Inefficient</span>: Backtracking is inefficient, as
+                                there is no reference to the previous node. Doubly linked lists are more suitable for
+                                such scenarios.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Cache Locality</span>: Poor cache locality due to scattered storage
+                                locations of nodes can result in slower access times compared to contiguous storage
+                                structures like arrays.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>
+                        In the given example <code>Red</code> color variable is the address of the next node. It is also
+                        called as <code>pointer</code> to the next node. <code>X</code> defined as null ptr, which means
+                        there are no nodes after that node.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Example</h1>
+                    <div class="line"></div>
+                    <div class="linkList">
+                        <div class="li">
+                            <div class="data">1</div>
+                            <div class="pointer">100</div>
+                        </div>
+                        <div class="li">
+                            <div class="data">2</div>
+                            <div class="pointer" style="--id:104"></div>
+                        </div>
+                        <div class="li">
+                            <div class="data">3</div>
+                            <div class="pointer">108</div>
+                        </div>
+                        <div class="li">
+                            <div class="data">4</div>
+                            <div class="pointer">112</div>
+                        </div>
+                        <div class="li">
+                            <div class="data">5</div>
+                            <div class="pointer">X</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #040404; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include&lt;iostream&gt;</span>
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">std;</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Node</span><span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">public:</span> <span style="color: #75715e">//access modifiers</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">data;</span> <span style="color: #75715e">// node value</span>
+        <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">next;</span> <span style="color: #75715e">// next node pointer</span>
+<span style="color: #f8f8f2">};</span>
+
+
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+
+    
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">head</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Node();</span> <span style="color: #75715e">// intialising node</span>
+    <span style="color: #f8f8f2">head</span> <span style="color: #f92672">-&gt;</span> <span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">10</span> <span style="color: #f8f8f2">;</span>  <span style="color: #75715e">// assigning values for each node </span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">first</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Node()</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">first</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">20</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">second</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Node()</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">second</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">30</span> <span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">//linking to one another </span>
+
+    <span style="color: #f8f8f2">head</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">next</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">first</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">first</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">next</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">second</span> <span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">second</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">next</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">nullptr</span> <span style="color: #f8f8f2">;</span>  <span style="color: #75715e">// assigning NULL to the last node</span>
+
+    <span style="color: #75715e">// displaying nodes using while loop</span>
+
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">(head</span> <span style="color: #f92672">!=</span> <span style="color: #f8f8f2">NULL)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">head</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; -&gt; &quot;</span> <span style="color: #f8f8f2">;</span> <span style="color: #75715e">// printing an data value ;</span>
+        <span style="color: #f8f8f2">head</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">head</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">next</span> <span style="color: #f8f8f2">;</span> <span style="color: #75715e">// moving to next node by assigning head&#39;s next to head</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre>
+                    </div>
+
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+
+                </div>
+            </div>
+            <div id="3" class="content">
+                <div class="card">
+                    <h1>Stacks</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        A stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
+                        Elements, called items, are added and removed from the same end, typically referred to as the
+                        top. Common operations include push (adding an item) and pop (removing the top item). Stacks are
+                        used for managing function calls, expression evaluation, and undo mechanisms. They provide a
+                        simple and efficient way to handle data in a last-in, first-out manner. Additionally, stacks
+                        play a crucial role in recursive algorithms and can be implemented using arrays or linked lists.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">LIFO Principle</span>: Stacks follow the Last In, First Out (LIFO)
+                                order, making them suitable for applications where the most recently added item is
+                                likely to be accessed or removed first. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Simple and Efficient</span>: Stacks are conceptually simple and easy
+                                to implement, requiring only two primary operations: push (adding an item) and pop
+                                (removing the top item).</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Function Call Management</span>: Stacks are used in programming for
+                                managing function calls, enabling the system to keep track of the execution sequence and
+                                return addresses.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Expression Evaluation</span>: Stacks play a key role in evaluating
+                                expressions, ensuring proper order of operations and simplifying the parsing
+                                proces(infix,postfix,prefix expressions)</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Efficiency</span>: Stacks can be implemented using arrays or
+                                linked lists, allowing for efficient memory utilization based on the specific
+                                requirements of the application.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Limited Access</span>: Access to elements in the middle of the stack
+                                is restricted, as items can only be added or removed from the top. Random access to
+                                elements is not efficient. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Fixed Size Limitation</span>: If implemented using arrays, a stack
+                                may have a fixed size, leading to potential overflow issues if the stack becomes full.
+                                Linked list implementations do not have this limitation.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Not Suitable for All Problems</span>: While stacks are useful in
+                                specific scenarios like function call management and expression evaluation, they are not
+                                the optimal choice for all types of data manipulation problems.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Potential for Stack Overflow</span>: Recursive algorithms heavily
+                                relying on the call stack may lead to stack overflow if the depth of recursion becomes
+                                too large, impacting the program's execution.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Fragmentation</span>: In array-based implementations, push and
+                                pop operations may cause memory fragmentation, especially if there are frequent resizing
+                                operations to accommodate changing stack sizes.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Animation</h1>
+                    <div class="line"></div>
+                    <div class="stack">
+                        <div style="--id:5" class="si">5</div>
+                        <div style="--id:4" class="si">4</div>
+                        <div style="--id:3" class="si">3</div>
+                        <div style="--id:2" class="si">2</div>
+                        <div style="--id:1" class="si">1</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #040404; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include &lt;iostream&gt;</span>
+    <span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">std;</span>
+
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">MAX_SIZE</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// Maximum size of the stack</span>
+    
+    <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Stack</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">private:</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">arr[MAX_SIZE];</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">top;</span>
+    
+    <span style="color: #f8f8f2">public:</span>
+        <span style="color: #f8f8f2">Stack()</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">top</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// Initialize top to -1 indicating an empty stack</span>
+        <span style="color: #f8f8f2">}</span>
+    
+        <span style="color: #75715e">// Function to push an element onto the stack</span>
+        <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">push(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(top</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">MAX_SIZE</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+                <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Stack Overflow! Cannot push more elements.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+                <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">}</span>
+            <span style="color: #f8f8f2">arr[</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">top]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">value;</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">value</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; pushed onto the stack.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    
+        <span style="color: #75715e">// Function to pop an element from the stack</span>
+        <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">pop()</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(top</span> <span style="color: #f92672">==</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+                <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Stack Underflow! Cannot pop from an empty stack.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+                <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">}</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">arr[top</span><span style="color: #f92672">--</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; popped from the stack.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    
+        <span style="color: #75715e">// Function to get the top element of the stack</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">peek()</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(top</span> <span style="color: #f92672">==</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+                <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Stack is empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+                <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// You can choose to return a specific value to indicate an empty stack</span>
+            <span style="color: #f8f8f2">}</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">arr[top];</span>
+        <span style="color: #f8f8f2">}</span>
+    
+        <span style="color: #75715e">// Function to check if the stack is empty</span>
+        <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">isEmpty()</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">top</span> <span style="color: #f92672">==</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">};</span>
+    
+    <span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">Stack</span> <span style="color: #f8f8f2">myStack;</span>
+    
+        <span style="color: #f8f8f2">myStack.push(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">myStack.push(</span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">myStack.push(</span><span style="color: #ae81ff">30</span><span style="color: #f8f8f2">);</span>
+    
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Top element: &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">myStack.peek()</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    
+        <span style="color: #f8f8f2">myStack.pop();</span>
+        <span style="color: #f8f8f2">myStack.pop();</span>
+        <span style="color: #f8f8f2">myStack.pop();</span>
+    
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(myStack.isEmpty())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Stack is empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Stack is not empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    
+        <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    </pre>
+                    </div>
+
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+
+                </div>
+            </div>
+            <div id="4" class="content">
+                <div class="card">
+                    <h1>Queues</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        A queue is a linear data structure that follows the First In, First Out (FIFO) principle.
+                        Elements, called items, are added at the rear (enqueue) and removed from the front (dequeue).
+                        Queues are essential for managing processes in a sequential order, ensuring fairness in access.
+                        They are used in various applications, such as task scheduling, breadth-first search algorithms,
+                        and print job management. Queues facilitate efficient data handling, preventing data
+                        manipulation conflicts. Implementation can be done using arrays or linked lists. Overall, queues
+                        provide a systematic approach to handle data in a first-come, first-served manner, supporting
+                        diverse computational tasks.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">FIFO Principle</span>: Queues follow the First In, First Out (FIFO)
+                                order, ensuring fairness in data processing and maintaining a sequential flow. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Task Scheduling</span>: Queues are crucial for task scheduling,
+                                ensuring that processes are executed in the order they arrive, preventing resource
+                                contention.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Breadth-First Search</span>:In graph algorithms like breadth-first
+                                search, queues are essential for exploring and processing nodes level by level.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Print Job Management</span>: Queues are used in print spooling
+                                systems, managing print job requests in the order they are submitted.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Buffering and Data Handling</span>: Queues are effective for
+                                buffering data between different components of a system, helping to smooth out
+                                variations in processing speed.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Limited Access</span>: Similar to stacks, queues have limited access
+                                to elements. Items can only be added at the rear and removed from the front, restricting
+                                random access.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Fixed Size Limitation</span>: Queue implementations using arrays may
+                                have a fixed size, potentially leading to overflow issues if the queue becomes full.
+                                Linked list implementations do not have this limitation.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Not Suitable for All Problems</span>:While queues are effective for
+                                managing sequential processes, they may not be the optimal choice for scenarios where
+                                prioritized or random access is required.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Overhead</span>: Maintaining a queue requires additional
+                                memory for storing references or pointers, leading to increased memory overhead.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Complexity in Implementation</span>: Depending on the specific
+                                requirements and application, implementing certain types of queues (e.g., priority
+                                queues) may introduce additional complexity.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>
+                        All the elements enter into queue through rear and leaves through front, which ever element
+                        enters first leaves first.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Animation</h1>
+                    <div class="line"></div>
+                    <div class="queue">
+                        <div class="qi">1</div>
+                        <div class="qi">2</div>
+                        <div class="qi">3</div>
+                        <div class="qi">4</div>
+                        <div class="qi">5</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #040404; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include &lt;iostream&gt;</span>
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">std;</span>
+
+<span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">MAX_SIZE</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// Maximum size of the queue</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Queue</span> <span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">private:</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">arr[MAX_SIZE];</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">front,</span> <span style="color: #f8f8f2">rear;</span>
+
+<span style="color: #f8f8f2">public:</span>
+    <span style="color: #f8f8f2">Queue()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">front</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">rear</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to check if the queue is empty</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">isEmpty()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">front</span> <span style="color: #f92672">==</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">rear</span> <span style="color: #f92672">==</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to check if the queue is full</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">isFull()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">(rear</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">MAX_SIZE</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">front;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to enqueue (insert) an element into the queue</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">enqueue(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(isFull())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Queue is full.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(isEmpty())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">front</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">rear</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">rear</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(rear</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">MAX_SIZE;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #f8f8f2">arr[rear]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">value;</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">value</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; enqueued into the queue.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to dequeue (remove) an element from the queue</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">dequeue()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(isEmpty())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Queue is empty. Cannot dequeue.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">arr[front]</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; dequeued from the queue.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(front</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">rear)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #75715e">// If there was only one element in the queue</span>
+            <span style="color: #f8f8f2">front</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">rear</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">front</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(front</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">MAX_SIZE;</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to get the front element of the queue without removing it</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">frontElement()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(isEmpty())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Queue is empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// You can choose to return a specific value to indicate an empty queue</span>
+        <span style="color: #f8f8f2">}</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">arr[front];</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">};</span>
+
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Queue</span> <span style="color: #f8f8f2">q1;</span>
+
+    <span style="color: #f8f8f2">q1.enqueue(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">q1.enqueue(</span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">q1.enqueue(</span><span style="color: #ae81ff">30</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">q1.enqueue(</span><span style="color: #ae81ff">40</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">q1.dequeue();</span>
+
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Front element: &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">q1.frontElement()</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">q1.dequeue();</span>
+    <span style="color: #f8f8f2">q1.dequeue();</span>
+    <span style="color: #f8f8f2">q1.dequeue();</span>
+    <span style="color: #f8f8f2">q1.dequeue();</span> <span style="color: #75715e">// Trying to dequeue from an empty queue</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(q1.isEmpty())</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Queue is empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Queue is not empty.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre>
+                    </div>
+
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+
+                </div>
+            </div>
+            <div id="5" class="content">
+                <div class="card">
+                    <h1>Trees</h1>
+                    <div class="line">
+
+                    </div>
+                    <p>
+                        A tree is a hierarchical data structure composed of nodes connected by edges. It consists of a
+                        root node at the top, with each non-root node having parent-child relationships. Nodes with no
+                        children are leaves. Trees are widely used in computer science for representing hierarchical
+                        relationships, such as file systems, organizational charts, and XML/HTML structures. The depth
+                        of a tree is the length of the longest path from the root to a leaf, and its height is the
+                        length of the longest path from the root to any node. Trees facilitate efficient searching,
+                        sorting, and representation of hierarchical relationships in various applications.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Hierarchical Organization</span>: Trees naturally represent
+                                hierarchical structures, making them suitable for modeling relationships in systems like
+                                file directories and organizational charts.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Efficient Searching</span>: Binary search trees offer efficient
+                                search operations with logarithmic time complexity, facilitating quick retrieval of
+                                data.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Ordered Representation</span>:Binary search trees maintain order,
+                                enabling easy traversal and efficient operations like finding the minimum or maximum
+                                element.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Balanced Trees for Optimal Performance</span>: Balanced trees, such
+                                as AVL and Red-Black trees, ensure that the tree remains balanced, providing optimal
+                                search and insertion performance.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Efficient Sorting</span>: Trees, particularly binary search trees,
+                                offer efficient sorting algorithms like in-order traversal.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Complexity in Implementation</span>: Implementing and maintaining
+                                tree structures, especially balanced trees, can be more complex than simpler data
+                                structures.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Overhead</span>: Trees can have higher memory overhead
+                                compared to linear data structures, as each node requires additional memory for pointers
+                                and data.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Not Always Self-Balancing</span>:Some tree structures, like basic
+                                binary trees, may become unbalanced during insertions and deletions, leading to
+                                performance degradation.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Slower Insertion/Deletion in Unbalanced Trees</span>: Unbalanced
+                                trees can result in slower insertion and deletion operations, as they may require
+                                restructuring the tree to maintain balance.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Limited for Some Operations</span>: While efficient for search and
+                                retrieval, trees may not be the best choice for certain operations like sequential
+                                access or range queries.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>
+                        In the given example <code>Grand childs</code> are called as <code>Terminal Nodes</code> or
+                        <code>Leaf Nodes</code>. This is a picture of binary tree where it has only maximum of two
+                        childs for every node at any given level. Level is the horizontal rows. Top level is
+                        <code>level-0 (Node) , level-1 (child) </code> and so on.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Image</h1>
+                    <div class="line"></div>
+                    <div class="imagecontainer">
+                        <img src="../svgs/Untitled.png"></img>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #040404; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include &lt;iostream&gt;</span>
+
+<span style="color: #75715e">//use std:: operator. It is a good practice</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Node</span> <span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">public:</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">left;</span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">right;</span>
+
+    <span style="color: #f8f8f2">Node(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">value;</span>
+        <span style="color: #f8f8f2">left</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">nullptr;</span>
+        <span style="color: #f8f8f2">right</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">nullptr;</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">};</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">BinaryTree</span> <span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">private:</span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">root;</span>
+
+<span style="color: #f8f8f2">public:</span>
+    <span style="color: #f8f8f2">BinaryTree()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">root</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">nullptr;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to insert a value into the binary tree</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">insert(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">root</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">insertRecursive(root,</span> <span style="color: #f8f8f2">value);</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Recursive function to insert a value into the binary tree</span>
+    <span style="color: #f8f8f2">Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">insertRecursive(Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">current,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(current</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">nullptr)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Node(value);</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(value</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">left</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">insertRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">left,</span> <span style="color: #f8f8f2">value);</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(value</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">right</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">insertRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">right,</span> <span style="color: #f8f8f2">value);</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">current;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to search for a value in the binary tree</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">search(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">searchRecursive(root,</span> <span style="color: #f8f8f2">value);</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Recursive function to search for a value in the binary tree</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">searchRecursive(Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">current,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">value)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(current</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">nullptr)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(value</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(value</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">searchRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">left,</span> <span style="color: #f8f8f2">value);</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">searchRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">right,</span> <span style="color: #f8f8f2">value);</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Function to display the binary tree in-order</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">displayInOrder()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">displayInOrderRecursive(root);</span>
+        <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">// Recursive function to display the binary tree in-order</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">displayInOrderRecursive(Node</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">current)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(current</span> <span style="color: #f92672">!=</span> <span style="color: #f8f8f2">nullptr)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">displayInOrderRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">left);</span> <span style="color: #75715e">// calling recursively to traverse left sub-tree</span>
+            <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">data</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">displayInOrderRecursive(current</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">right);</span> <span style="color: #75715e">// calling recursively to traverse right sub-tree</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">};</span>
+
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">BinaryTree</span> <span style="color: #f8f8f2">bt;</span>
+
+    <span style="color: #f8f8f2">bt.insert(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">bt.insert(</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">bt.insert(</span><span style="color: #ae81ff">15</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">bt.insert(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">bt.insert(</span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">bt.displayInOrder();</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(bt.search(searchValue))</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; found in the tree.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; not found in the tree.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(bt.search(searchValue))</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; found in the tree.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">searchValue</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; not found in the tree.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre>
+                    </div>
+
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+
+                </div>
+            </div>
+            <div id="6" class="content">
+                <div class="card">
+                    <h1>Graphs</h1>
+                    <div class="line"></div>
+                    <p>Graphs in data structures are a fundamental representation of relationships between entities.
+                        Comprising vertices and edges, graphs model connections in various systems, such as social
+                        networks, transportation networks, and more. Directed edges indicate one-way connections, while
+                        undirected edges imply bidirectional relationships. Graphs can be cyclic or acyclic based on the
+                        presence of loops. Algorithms like Depth-First Search (DFS) and Breadth-First Search (BFS) are
+                        employed for traversal. Applications range from pathfinding and network analysis to optimizing
+                        logistics. Graphs provide a versatile framework for solving complex problems, making them a
+                        cornerstone in data structures and algorithmic design.</p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">versatility</span>: Graphs are a versatile data structure, suitable
+                                for modeling various real-world relationships and structures.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Complex Relationships</span>: They effectively represent complex
+                                relationships, such as social connections, network topologies, and dependencies between
+                                tasks.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Efficient Queries</span>:Graph databases excel at traversing
+                                relationships, making queries for connected data more efficient compared to other data
+                                structures.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Optimization Problems</span>: Graphs are instrumental in solving
+                                optimization problems, like finding the shortest path, critical path analysis, and
+                                maximum flow problems.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Flexibility</span>: Graphs can be dynamically modified, allowing for
+                                the addition or removal of vertices and edges as relationships change.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Space Complexity</span>: Depending on the implementation, graphs can consume a significant amount of memory, especially in sparse graphs, impacting space efficiency.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Complexity of Algorithms</span>: Some graph algorithms, like finding the shortest path in a weighted graph, can have a higher time complexity compared to simpler data structures.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Difficulty in Representation</span>:Representing certain types of graphs, especially those with complex relationships, may become challenging and may require additional data structures.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Cyclic Dependencies</span>: In cyclic graphs, handling dependencies can be intricate, leading to challenges in maintaining data consistency.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Traversal Overhead</span>: Traversing a graph can be computationally expensive, particularly in large graphs, affecting the performance of graph-based algorithms.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>
+                        In directed graph there is only one way, i.e where pointer of arrow pointed towards. It cannot traverse back. This is called directed graph.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Directed Graph</h1>
+                    <div class="line"></div>
+                    <div class="imagecontainer">
+                        <img src="../images/graph.jpg"></img>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>In undirected graph there are no directions for the nodes.</p>
+                </div>
+                <div class="card">
+                    <h1>Undirected Graph</h1>
+                    <div class="line"></div>
+                    <div class="imagecontainer">
+                        <img src="../images/undirected.jpg"></img>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>
+                        Adjacency matrix shows us the adjacent or side nodes of a particular node. you can see that <code>B,C and D</code> are having direct routes from <code>A</code>
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Adjacency Matrix</h1>
+                    <div class="line"></div>
+                    <div class="imagecontainer">
+                        <img src="../images/adjacenymat.jpg"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/intro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms</title>
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="shortcut icon" href="../icons/web.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <section id="introDS">
+        <div class="introDS__left">
+            <ul id="introDS__ul">
+                <li class="nav__item toggled "><a href="#">Linear search</a></li>
+                <li class="nav__item"><a href="#">Binary search</a></li>
+                <li class="nav__item"><a href="#">Hash Table</a></li>
+            </ul>
+        </div>
+        <div class="introDS__right">
+            <div id="0" class="content active">
+                <div class="card">
+                    <h1>what is linear search ?</h1>
+                    <div class="line"></div>
+                    <p>Linear search is a basic search algorithm that sequentially examines each element in a list or
+                        array until a match is found or the entire list is traversed. It operates by starting at the
+                        beginning and checking each element one by one. While simple, it has a time complexity of O(n),
+                        making it less efficient for large datasets compared to more advanced algorithms like binary
+                        search. Linear search is easy to implement and suitable for small datasets or unordered lists,
+                        but its linear time complexity may hinder performance with extensive or sorted datasets.</p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Simplicity</span> : Linear search is straightforward and easy to
+                                implement, making it accessible for beginners.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Applicability</span>: Suitable for small datasets or unordered lists
+                                where the overhead of more complex algorithms may not be justified.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">No sorting</span>: Linear search can be used on unsorted lists,
+                                unlike some other search algorithms that require data to be sorted</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Inefficiency for Large Datasets</span> : With a time complexity of
+                                O(n), linear search becomes inefficient for large datasets as the search time grows
+                                linearly with the size of the input.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Not Ideal for Sorted Data</span>: In cases where data is sorted, more
+                                efficient search algorithms like binary search offer better performance with a time
+                                complexity of O(log n).</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Limited Use in Real-Time Systems</span>: In real-time systems or
+                                applications where speed is crucial, the linear search may not be the optimal choice due
+                                to its relatively slower performance on larger datasets.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>Iterates through each element in the data structure until the target item is found and returns
+                        it's index. Simple but may be inefficient for large datasets.</p>
+                </div>
+                <div class="card">
+                    <h1>video</h1>
+                    <div class="line"></div>
+                    <video controls src="video/Linearsearch.mp4"></video>
+                </div>
+                <div class="card">
+                    <h1>Code<code>.cpp</code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #272822; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">int</span> <span style="color: #a6e22e">linearSearch</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">arr[],</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">n,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">n;</span> <span style="color: #f92672">++</span><span style="color: #f8f8f2">i)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(arr[i]</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">i;</span>  <span style="color: #75715e">// Return index if found</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>  <span style="color: #75715e">// Return -1 if not found</span>
+<span style="color: #f8f8f2">}</span>
+</pre>
+                    </div>
+                    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+                </div>
+            </div>
+            <div id="1" class="content">
+                <div class="card">
+                    <h1>what is Binary search ?</h1>
+                    <div class="line"></div>
+                    <p>Binary search is a divide-and-conquer algorithm used to efficiently locate a target value within
+                        a sorted array or list. The process begins by comparing the target with the middle element of
+                        the array. If they match, the search is successful. If the target is smaller, the search
+                        continues in the lower half; if larger, in the upper half. This halves the search space at each
+                        step, leading to logarithmic time complexity, making binary search significantly faster than
+                        linear search for large datasets. It is a key algorithm in computer science, commonly employed
+                        in search operations, data retrieval, and other applications requiring efficient search methods.
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Efficiency</span>: Binary search has a logarithmic time complexity,
+                                making it highly efficient, especially for large datasets. It reduces the search space
+                                by half with each comparison.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Optimal for sorted data</span>: It is specifically designed for
+                                sorted arrays or lists, where its efficiency shines. It is unsuitable for unsorted data.
+                            </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Predicatable performance</span>: The algorithm's performance is
+                                consistent and predictable, providing a clear understanding of its time complexity.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory efficient</span>: Binary search typically requires only a
+                                constant amount of additional memory, making it memory-efficient.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Sorted Data</span>: Binary search relies on the input data being
+                                sorted. If the data is not sorted, a preliminary sorting step is needed, which can be
+                                time-consuming. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Limited Applicability</span>: It is not suitable for certain data
+                                structures like linked lists, where random access is not efficient. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">No Multiple matches</span>: Binary search identifies only one
+                                occurrence of the target value. If there are multiple instances, additional steps are
+                                needed to locate all occurrences.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">complexity</span>: While the basic concept is simple, the
+                                implementation can be complex, especially for beginners. Edge cases, such as handling
+                                duplicates, require careful consideration.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Explanation</h1>
+                    <div class="line"></div>
+                    <p>It is applicable to sorted array only. Pointer is pointed to the array[k] where
+                        <code>k=Low Index + (High Index - Low Index) / 2 </code>. If the target element is less than
+                        array[k] element, then left sub array is taken by recursive approach otherwise right sub array
+                        is taken for recursive approach. <code>More efficient than Linear search</code>
+                    </p>
+                </div>
+                <div class="card">
+                    <h1>Video</h1>
+                    <div class="line"></div>
+                    <video controls src="video/Binarysearch.mp4"></video>
+                </div>
+                <div class="card">
+                    <h1>Code<Code>.cpp</Code></h1>
+                    <div class="line"></div>
+                    <!-- HTML generated using hilite.me -->
+                    <div
+                        style="background: #272822; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">int</span> <span style="color: #a6e22e">binarySearch</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">arr[],</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">low,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">high,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">(low</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">high)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">mid</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">low</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">(high</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">low)</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(arr[mid]</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">mid;</span>  <span style="color: #75715e">// Return index if found</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(arr[mid]</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">low</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">mid</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">high</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">mid</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>  <span style="color: #75715e">// Return -1 if not found</span>
+<span style="color: #f8f8f2">}</span>
+</pre><p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="2" class="content">
+                <div class="card">
+                    <h1>what is a Hash table ?</h1>
+                    <div class="line"></div>
+                    <p>A hash table is a data structure that efficiently stores and retrieves key-value pairs. It uses a
+                        hash function to map keys to indices in an array, facilitating quick access to values. This
+                        structure allows for constant-time average-case complexity for basic operations like insertion,
+                        deletion, and search. Hash tables are widely used in computer science for implementing
+                        associative arrays, caches, and databases. However, collisions, where different keys hash to the
+                        same index, need careful handling, often using techniques like chaining or open addressing. The
+                        effectiveness of a hash table relies on a well-designed hash function and proper collision
+                        resolution strategies.</p>
+                </div>
+                <div class="card">
+                    <h1>Pros</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Efficient retrieval</span>: Hashing provides constant-time average-case complexity for basic operations like insertion, deletion, and search, making it efficient for retrieving data. </p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Fast Lookup</span>: Hash tables enable quick lookups by using a hash function to directly map keys to indices, minimizing the time needed to locate values.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Flexible key types</span>: Hashing supports various key types, allowing for versatile implementations of data structures like associative arrays and sets.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Space Efficiency</span>: Hash tables can be memory-efficient, especially when dealing with large datasets, as they allocate space based on the actual number of elements.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Dynamic Sizing</span>: Some hash table implementations allow for dynamic resizing, adapting to changes in the number of elements and maintaining efficiency.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>Cons</h1>
+                    <div class="line"></div>
+                    <ul>
+                        <li>
+                            <p><span id="sub-head">Collision Handling</span>: Collisions occur when different keys hash to the same index. Efficient collision resolution strategies, like chaining or open addressing, are necessary but add complexity.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Deterministic Hash Function</span>: The effectiveness of hashing depends on a good hash function, and a poorly designed one can lead to clustering and decreased performance.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Ordering</span>:  Hash tables do not inherently maintain any order of elements, which can be a drawback when order matters for certain applications.</p>
+                        </li>
+                        <li>
+                            <p><span id="sub-head">Memory Overhead</span>: In some implementations, there may be additional memory overhead due to the need for auxiliary data structures for collision resolution.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1>visual</h1>
+                    <div class="line"></div>
+                    <table style="width: 50%;">
+                        <thead><tr><td style="color:white; border: 2px solid white ; width: 60px ;" >Keys</td><td style="color:white; border: 2px solid white ; width: 60px ;" >Values</td></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;">1</td>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >10</td>
+                            </tr>
+                            <tr>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >2</td>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >17</td>
+                            </tr>
+                            <tr>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >3</td>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >23</td>
+                            </tr>
+                            <tr>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >4</td>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >40</td>
+                            </tr>
+                            <tr>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >5</td>
+                                <td style="color:white; border: 2px solid white ; width: 60px ;" >30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <h1>Code<code>.cpp</code></h1>
+                    <div class="line"></div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid rgba(255,255,255,0.134);border-width:.1em .1em .1em .1em;padding:.2em .6em; border-radius : 5px ;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">// Example using C++ unordered_map</span>
+    <span style="color: #75715e">#include &lt;unordered_map&gt;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #a6e22e">hashSearch</span><span style="color: #f8f8f2">(std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">unordered_map</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;&amp;</span> <span style="color: #f8f8f2">hashmap,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">target)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">auto</span> <span style="color: #f8f8f2">it</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">hashmap.find(target);</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(it</span> <span style="color: #f92672">!=</span> <span style="color: #f8f8f2">hashmap.end())</span> <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">it</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">second;</span>  <span style="color: #75715e">// Return value if found</span>
+        <span style="color: #f8f8f2">}</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>  <span style="color: #75715e">// Return -1 if not found</span>
+    <span style="color: #f8f8f2">}</span>
+    </pre></div>
+    <p style="margin-left: 10px;">Thank you <span><a href="http://hilite.me/">Hilite</a></span></p>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/algo.js"></script>
+</body>
+
+</html>
